@@ -1,0 +1,24 @@
+body{
+	height:100%;
+}
+html{
+	height:100%;
+}
+#frame{
+	height:100%;	
+	background-color:teal;
+	position:relative;
+}
+#zone{
+	margin:0;
+	position:absolute;
+	top:50%;
+	left:40%;
+}
+#submit{
+	position:absolute;
+	text-decoration:none;
+	background-color:green;
+	top:60%;
+	left:47%;
+}

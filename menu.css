@@ -1,0 +1,88 @@
+#cate{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	background-color:green;
+}
+#cate li{
+	margin: 0px 0px;
+}
+#cate li:first-child{
+
+	margin-top:0;
+}
+#cate button{
+	padding:20px 0;
+	display:block;
+	text-color:white;
+	text-decoration: none;
+}
+#cate button.active{
+	background-color:#87CEEB;
+}
+#cate button:hover:not(.active){
+	background-color:#ffffff;
+}
+#back {
+	padding:20px 30px 20px 30px;
+}
+.food-img{
+	width:150px;
+	height:150px;
+}
+.menu{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+.row{
+	padding:30px;
+}
+.row div{
+	margin:15px 0px;
+	border-style:solid;
+}
+.row div.selected{
+	background-color:yellow;
+}
+#order{
+	height:300px;
+	overflow-x:scroll;
+	overflow-y:scroll;
+	background-color:teal;
+}
+#order div{
+	transform:scale(0.7); 
+	height:130px;
+	width:200px;
+}
+#order div p{
+	float:left;
+}
+#order div img{
+	float:left;
+}
+#order div button{
+	float:right;
+	background-color:red;
+}
+#add{
+	margin:10px 20px;
+	padding:10px 20px;
+	background-color:teal;
+}
+#customize{
+	margin:10px 20px;
+	padding:10px 20px;
+	background-color:blue;
+}
+#next{
+	margin:10px 20px;
+	padding:10px 20px;
+	background-color:red;
+}
+
+#stackandbutton{
+	background-color:teal;
+}
+	
