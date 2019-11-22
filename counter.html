@@ -9,7 +9,6 @@
 
 <!--<meta http-equiv="refresh" content="2">-->
 <script src="jquery-3.4.1.min.js"></script>
-<script src="menu.js"></script>
 	<script>
 		function add(){
 			if(document.getElementById("number").value <3){
@@ -25,7 +24,12 @@
 			}
 		}
 		function next(){
+			num = document.getElementById("number").value;
+			localStorage.setItem("num",num);
 		}
+
+		localStorage.clear();
+
 	</script>
 
 </head>

@@ -18,7 +18,7 @@
 <div class="w3-row" id="row">
 	<div class="w3-col m1 w3-center">
 		<ul id="cate">
-			<li><a href="https://www.w3schools.com" class="w3-button w3-black" id="back">&lt--  Back</a></li>
+			<li><a href="counter.html" class="w3-button w3-black" id="back">&lt--  Back</a></li>
 			<li><p style="color:white;font-size:20px;">Category:</p><li>
 			<li><button class="w3-button w3-block w3-hover-light-blue active" id="main">Main</button></li>
 			<li><button class="w3-button w3-block w3-hover-light-blue" id="appetizer">Appetizer</button></li>
@@ -38,51 +38,51 @@
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/burger.jpg" class="food-img">
-				<p> Hamburger $10 </p>
+				<p class="foodS"> Hamburger $10 </p>
 			</div>
 			<div>
 				<img src="image/pizza.jpg" class="food-img">
-				<p> Pizza $15</p>
+				<p class="foodS"> Pizza $15</p>
 			</div>
 		</div>
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/pasta.jpg" class="food-img">
-				<p> Pasta $10 </p>
+				<p class="foodS"> Pasta $10 </p>
 			</div>
 			<div>
 				<img src="image/hotdog.jpg" class="food-img">
-				<p> Hotdog $15</p>
+				<p class="foodS"> Hotdog $15</p>
 			</div>
 		</div>
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/steak.jpg" class="food-img">
-				<p> Steak $10 </p>
+				<p class="foodS"> Steak $10 </p>
 			</div>
 			<div>
 				<img src="image/chicken.jpg" class="food-img">
-				<p> chicken $15</p>
+				<p class="foodS"> chicken $15</p>
 			</div>
 		</div>
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/rice.jpg" class="food-img">
-				<p> Rice $10 </p>
+				<p class="foodS"> Rice $10 </p>
 			</div>
 			<div>
 				<img src="image/noodles.jpg" class="food-img">
-				<p> Noodles $15</p>
+				<p class="foodS"> Noodles $15</p>
 			</div>
 		</div>
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/taco.jpg" class="food-img">
-				<p> Taco $10 </p>
+				<p class="foodS"> Taco $10 </p>
 			</div>
 			<div>
 				<img src="image/borrito.jpg" class="food-img">
-				<p> Borrito $15</p>
+				<p class="foodS"> Borrito $15</p>
 			</div>
 		</div>
 	</div>
@@ -91,21 +91,21 @@
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/raw-meat.jpg" class="food-img">
-				<p> Raw-meat $100 </p>
+				<p class="foodS"> Raw-meat $100 </p>
 			</div>
 			<div>
 				<img src="image/salad.jpg" class="food-img">
-				<p> Salad $15</p>
+				<p class="foodS"> Salad $15</p>
 			</div>
 		</div>
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/ham-cheese.jpg" class="food-img">
-				<p> Ham and cheese $100 </p>
+				<p class="foodS"> Ham and cheese $100 </p>
 			</div>
 			<div>
 				<img src="image/scallop.jpg" class="food-img">
-				<p> Scallop $15</p>
+				<p class="foodS"> Scallop $15</p>
 			</div>
 		</div>
 	</div>
@@ -114,11 +114,11 @@
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/soup-red.jpg" class="food-img">
-				<p> Tomato soup $1000 </p>
+				<p class="foodS"> Tomato soup $1000 </p>
 			</div>
 			<div>
 				<img src="image/soup-yellow.jpg" class="food-img">
-				<p> Pumpkin soup $15</p>
+				<p class="foodS"> Pumpkin soup $15</p>
 			</div>
 		</div>
 	</div>
@@ -127,11 +127,11 @@
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/caramel-cake.jpg" class="food-img">
-				<p> Caramel cake $100 </p>
+				<p class="foodS"> Caramel cake $100 </p>
 			</div>
 			<div>
 				<img src="image/donut.jpg" class="food-img">
-				<p> Donut $15</p>
+				<p class="foodS"> Donut $15</p>
 			</div>
 		</div>
 	</div>
@@ -140,11 +140,11 @@
 		<div class="row" style="display:inline-block" >
 			<div>
 				<img src="image/pepsi.jpg" class="food-img">
-				<p> Pepsi $1000000 </p>
+				<p class="foodS"> Pepsi $1000000 </p>
 			</div>
 			<div>
 				<img src="image/coke.jpg" class="food-img">
-				<p> Coke $15</p>
+				<p class="foodS"> Coke $15</p>
 			</div>
 		</div>
 	</div>
@@ -163,6 +163,14 @@
 	<!--Button below-->
 		<div style="height:200px;background-color:yellow">
 			<button class="w3-button" id="add">Add</button>
+			<div class="dropdown" style="display:none">
+			  <button class="dropbtn">Add</button>
+				  <div class="dropdown-content">
+					  <a href="#">Bill 1</a>
+					  <a href="#">Bill 2</a>
+					  <a href="#">Bill 3</a>
+				  </div>
+			</div>
 			<a class="w3-button"id="customize" href="">Customize</a>
 			<a class="w3-button" id="next" href="">Next</a>
 		</div>
