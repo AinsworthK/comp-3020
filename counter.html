@@ -27,21 +27,21 @@
 			num = document.getElementById("number").value;
 			localStorage.setItem("num",num);
 		}
-
 		localStorage.clear();
-
 	</script>
 
 </head>
 <body>
 	<div id="frame">
+		<a id="back" style="color:lightGray;" class="w3-button w3-black" href="tap.html"><--Back</a>
 		<div id="zone">
+			<p>  How many bills do you want ?</p>
 			<button onclick="minus()">-</button>
 			<input type="number" id="number" value="1"></input>
 			<button  onclick="add()">+</button>
 		</div>
 		<a  onclick="next()" href="menu.html" id="submit">Confirm</a>
-		
+
 		</div>
 
 
@@ -50,4 +50,3 @@
 
 
 </html>
-

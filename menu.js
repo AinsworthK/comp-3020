@@ -70,6 +70,7 @@ $(document).ready(function(){
 				node.append(billnum);
 				node.append(btn);
 				orderStack.prepend(node);
+				appendStorage("order",$(".selected").attr("id")+" ");
 			}
 			else{
 				alert("Please select an item to add to order.  \nYou may select item in the menu by clicking them.");
@@ -99,11 +100,14 @@ $(document).ready(function(){
 				node.append(billnum);
 				node.append(btn);
 				orderStack.prepend(node);
+				appendStorage("order",$(".selected").attr("id")+" ");
 			}
 			else{
 				alert("Please select an item to add to order.  \nYou may select item in the menu by clicking them.");
 			}
 	});
+
+
 
 	$("#next").click(function(){
 		$("#order").children().each(function(){
@@ -112,7 +116,7 @@ $(document).ready(function(){
 			appendStorage(billNum,foodString);
 		});
 		alert("Bill 1: "+localStorage.getItem("Bill 1"));
-		alert("Bill 3: "+localStorage.getItem("Bill 2"));
+		alert("Bill 2: "+localStorage.getItem("Bill 2"));
 		alert("Bill 3: "+localStorage.getItem("Bill 3"));
 
 	});
@@ -124,5 +128,25 @@ $(document).ready(function(){
 	$("body").on("click",".cancel", function(){
 		$(this).parent().remove();
 	});
+	$("#customize").click(function(){
+		if($("*").hasClass("selected")){
+		localStorage.setItem("select",$(".selected").attr("id"));
+		window.location="customize.html";
+		}
+		else{
+				alert("Please select an item to customize.  \nYou may select item in the menu by clicking them.");
+		}
+	});
+
+
+
+	if(localStorage.getItem("select")!=null){
+		var where = localStorage.getItem("select");
+		$("#"+where).addClass("selected");
+	}
+	if(localStorage.getItem("order")!=null){
+		var string= localStorage.getItem("order");
+		alert(string);
+	}
 
 });
