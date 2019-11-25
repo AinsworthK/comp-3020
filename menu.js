@@ -71,6 +71,8 @@ $(document).ready(function(){
 				node.append(btn);
 				orderStack.prepend(node);
 				appendStorage("order",$(".selected").attr("id")+" ");
+				appendStorage("billNum",billnum.innerHTML);
+				$(".selected").removeClass("selected");
 			}
 			else{
 				alert("Please select an item to add to order.  \nYou may select item in the menu by clicking them.");
@@ -101,6 +103,8 @@ $(document).ready(function(){
 				node.append(btn);
 				orderStack.prepend(node);
 				appendStorage("order",$(".selected").attr("id")+" ");
+				appendStorage("billNum",billnum.innerHTML+",");
+				$(".selected").removeClass("selected");
 			}
 			else{
 				alert("Please select an item to add to order.  \nYou may select item in the menu by clicking them.");
@@ -146,7 +150,28 @@ $(document).ready(function(){
 	}
 	if(localStorage.getItem("order")!=null){
 		var string= localStorage.getItem("order");
-		alert(string);
+		var bill = localStorage.getItem("billNum");
+		var stringArray = string.split(" ");
+		var billArray = bill.split(",");
+		localStorage.clear();
+		var i;
+		for( i=0; i<string.length; i++){
+				orderStack = document.getElementById("order");
+				var billnum = document.createElement("p");
+				var node = document.createElement("div");
+				var btn = document.createElement("button");
+				btn.innerHTML = "X";
+				btn.className += "cancel";
+				node.innerHTML = $("#"+stringArray[i]).html();;
+				billnum.innerHTML = billArray[i];
+				billnum.className += "billnum";
+				billnum.style.display = "none";
+				node.append(billnum);
+				node.append(btn);
+				orderStack.prepend(node);
+				appendStorage("order",$(".selected").attr("id")+" ");
+				appendStorage("billNum",billnum.innerHTML+",");
+		}
 	}
 
 });

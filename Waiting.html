@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+	html{
+		height:100%;
+	}
+	body{
+		height:100%;
+	}
+      #BACK {
+      	font-size: 30px;
+    	margin-top: 20px;
+      	margin-left: 20px;
+      	display: inline-block;
+      }
+      
+      #Assist {
+      	font-size:30px;
+      	margin-left: 82%;
+      	display: inline;
+      }
+
+      #billCheck1, #billCheck2 {
+	width: 30px;
+    	height: 30px;
+      }
+ 
+      table {
+	text-align: center;
+	width: 75%;
+	display: inline-table;
+      }
+      
+      th {
+      	width: 20%;
+      	font-size: 30px;
+      }
+      
+      td {
+      	font-size: 30px;
+      }
+
+      #Entertainment {
+      	font-size: 30px;
+      	margin-top: 160px;
+      	margin-left: 20px;
+      	display: inline-block;
+      }
+
+      #PAY {
+      	font-size: 50px;
+      	margin-left: 80%;
+      	display: inline;
+      }
+
+    </style>
+  </head>
+  
+  <body style="background-color: LightBlue">
+    
+    <p id="BACK" >
+      <a href="menu.html" style="text-decoration: none; color: Gray;">BACK</a>
+    </p>
+    
+    <p id="Assist">
+      <a href="https://www.google.ca/" style="text-decoration: none; color: Tomato;">Call for Assitant</a>
+    </p>
+    
+    <h1>
+      <p id="theList" align="center"  style="font-size: 65px; margin-top: 50px;">
+        Item List
+      </p>
+    </h1>
+    
+    <p style="font-size: 40px; margin-top: 200px; margin-left: 100px; display: inline;">
+      <b style="color: Orange;">Bill 1</b>
+      <input type="checkbox" id="billCheck1" onclick="checkFunc1()" checked>
+      <em id="currBill1" style="font-size: 55px; color: Orange; margin-left: 33%;">
+        Bill 1
+      </em>
+      <em id="currBill2" style="font-size: 55px; color: SlateBlue; margin-left: 33%; display: none">
+        Bill 2
+      </em><br><br>
+      <b style = "color: SlateBlue; margin-left: 100px;">Bill 2</b>
+      <input type="checkbox" id="billCheck2" onclick="checkFunc2()">
+    </p>
+    
+    <table id = "itemList1" >
+      <tr>
+        <th>Name</th>
+        <th>Custmized</th>
+        <th>Status</th>
+        <th>Estimated time</th>
+      </tr>
+      <tr>
+        <td>Hamburger</td>
+        <td>No onion</td>
+        <td>Delivered</td>
+        <td>Done</td>
+      </tr>
+      <tr>
+        <td>Hamburger</td>
+        <td>More cheese</td>
+        <td>Delivered</td>
+        <td>Done</td>
+      </tr>
+      <tr>
+        <td>Pasta</td>
+        <td>Default</td>
+        <td>Waiting</td>
+        <td>10 Mins</td>
+      </tr>
+      <tr>
+        <td>Cola</td>
+        <td>Default</td>
+        <td>Waiting</td>
+        <td>5 Mins</td>
+      </tr>
+    </table>
+    
+    <table id = "itemList2" style = "display: none">
+      <tr>
+        <th>Name</th>
+        <th>Custmized</th>
+        <th>Status</th>
+        <th>Estimated time</th>
+      </tr>
+      <tr>
+        <td>Rice</td>
+        <td>Default</td>
+        <td>Waiting</td>
+        <td>7 mins</td>
+      </tr>
+      <tr>
+        <td>Pasta</td>
+        <td>More cheese</td>
+        <td>Waiting</td>
+        <td>10 mins</td>
+      </tr>
+      <tr>
+        <td>Pepsi</td>
+        <td>Default</td>
+        <td>Delivered</td>
+        <td>Done</td>
+      </tr>
+      <tr>
+        <td>Sprite</td>
+        <td>Default</td>
+        <td>Waiting</td>
+        <td>1 Min</td>
+      </tr>
+    </table>
+    
+    <p><br></p>
+
+    <p id = "Entertainment">
+      <a href="Entertainment.html" style="text-decoration: none; 
+        color: Violet;">Entertainment</a>
+    </p>
+    
+    <p id = "PAY">
+      <a href="payment.html" style="text-decoration: none; color: DodgerBlue;">PAY</a>
+    </p>
+    
+    <script>
+       function checkFunc1() {
+          var checkBox = document.getElementById("billCheck1");
+          var table1 = document.getElementById("itemList1");
+          var table2 = document.getElementById("itemList2");
+          var bill1 = document.getElementById("currBill1");
+          var bill2 = document.getElementById("currBill2");
+          if (checkBox.checked == true){
+          	table1.style.display = "inline-table";
+      	table2.style.display = "none";
+      	document.getElementById("billCheck2").checked = false;
+          	bill1.style.display = "initial";
+          	bill2.style.display = "none";
+          } 
+       }
+      
+      function checkFunc2() {
+          var checkBox = document.getElementById("billCheck1");
+          var table1 = document.getElementById("itemList1");
+          var table2 = document.getElementById("itemList2");
+          var bill1 = document.getElementById("currBill1");
+          var bill2 = document.getElementById("currBill2");
+          if (checkBox.checked == true){
+      	table1.style.display = "none";
+          	table2.style.display = "inline-table";
+      	document.getElementById("billCheck1").checked = false;
+          	bill1.style.display = "none";
+          	bill2.style.display = "initial";
+          }
+       }
+    </script>
+
+  </body>
+</html>

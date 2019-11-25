@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="payment.css">
+<link rel="stylesheet" href="w3.css">
+<script src="jquery-3.4.1.min.js"></script>
+<script src="payment.js"></script>
+<!--<meta http-equiv="refresh" content="2">-->
+</head>
+<body>
+<style>
+ a{
+  color: black;
+  text-decoration: none;
+   }
+</style>
+
+<!--------------- Categoru and back button  --------------->
+<div class="w3-row" id="row">
+	<div class="w3-col m1 w3-center">
+	<a id="back" style="color:lightGray;" class="w3-button w3-black" href="menu.html"><--Back</a>
+		<ul id="cate">
+			<li><button class="w3-button w3-block w3-hover-light-blue active" id="BillOne">Bill One</button><li>
+			<li><button class="w3-button w3-block w3-hover-light-blue" id="BillTwo">Bill Two</button></li>
+			<li><button class="w3-button w3-block w3-hover-light-blue" id="BillThree">Bill Three</button></li>
+			<li><button class="w3-button w3-block w3-hover-light-blue" id="AllTogether">All Together</button></li>
+		</ul>
+  </div>
+
+  <div class="w3-col m9 w3-light-blue w3-center menu" id="Bill1" style="">
+	<pre style="font-size:17px;"><b>Item:</b>	      		<b>Price:</b>			<b>Amount:</b></pre>
+  </div>
+
+  <div class="w3-col m9 w3-light-blue w3-center menu" id="Bill2" style="display:none">
+	<pre style="font-size:17px;"><b>Item:</b>	      		<b>Price:</b>			<b>Amount:</b></pre>
+
+  </div>
+  <div class="w3-col m9 w3-light-blue w3-center menu" id="Bill3" style="display:none">
+	<pre style="font-size:17px;"><b>Item:</b>	      		<b>Price:</b>			<b>Amount:</b></pre>
+
+  </div>
+
+  <div class="w3-col m9 w3-light-blue w3-center menu" id="payAll" style="display:none">
+	<pre style="font-size:17px;"><b>Item:</b>	      		<b>Price:</b>			<b>Amount:</b></pre>
+  </div>
+
+  <div class="w3-col m2 w3-green w3-center " >
+	  <div class="w3-button w3-yellow" style="margin-bottom:300px;" id="assist">
+		 Call for assistant
+	  </div>
+	  <div class="w3-button" style="margin-right:10px;margin-bottom:60px;background-color:red;" id="payHere">
+		  Pay here
+	</div>
+	  <div class="w3-button" style="margin-right:10px;margin-bottom:20px;background-color:blue;" id="payFront">
+		  Pay at front
+	  </div>
+  </div>
+
+
+
+</div>
+
+</body>
+</html>

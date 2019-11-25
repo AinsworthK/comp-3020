@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="counter.css">
 
 
+
 <!--<meta http-equiv="refresh" content="2">-->
 <script src="jquery-3.4.1.min.js"></script>
 	<script>
@@ -27,13 +28,34 @@
 			num = document.getElementById("number").value;
 			localStorage.setItem("num",num);
 		}
+		$(document).ready(function(){
+			$(".langbtn").on("click",function(){
+				var string = $(this).html();
+				$(".dropbtn").html(string);
+			});
+		});
+
+
 		localStorage.clear();
+
+							
 	</script>
 
 </head>
 <body>
 	<div id="frame">
 		<a id="back" style="color:lightGray;" class="w3-button w3-black" href="tap.html"><--Back</a>
+
+		<div class="dropdown">
+			<button class="dropbtn">English</button>
+			<div class="dropdown-content">
+				<button class="langbtn">English</button>
+				<button class="langbtn">French</button>
+				<button class="langbtn">Chinese</button>
+			</div>
+		</div>
+		<p style="display:inline; float:right;"> Choose language :</p>
+
 		<div id="zone">
 			<p>  How many bills do you want ?</p>
 			<button onclick="minus()">-</button>
